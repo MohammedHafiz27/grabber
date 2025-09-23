@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:grabber/Core/utils/app_route.dart';
 import 'package:grabber/Core/utils/assets.dart';
 
 class SplashScreenBody extends StatefulWidget {
@@ -10,8 +12,8 @@ class SplashScreenBody extends StatefulWidget {
 }
 
 class _SplashScreenBodyState extends State<SplashScreenBody> with SingleTickerProviderStateMixin {
-  late AnimationController animationController;
-  late Animation<Offset> slideTransiton;
+  late final AnimationController animationController;
+  late final Animation<Offset> slideTransiton;
   @override
   void initState() {
     super.initState();
@@ -21,7 +23,11 @@ class _SplashScreenBodyState extends State<SplashScreenBody> with SingleTickerPr
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: animationController, curve: Curves.fastOutSlowIn));
     animationController.forward();
-    Future.delayed(const Duration(milliseconds: 1200), () {});
+    animationController.addStatusListener((status) {
+      if (status == AnimationStatus.completed && mounted) {
+        context.pushReplacement(AppRoute.homeScreen);
+      }
+    });
   }
 
   @override

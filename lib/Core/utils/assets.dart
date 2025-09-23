@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-
+  
   /// Assets for imagesBanana
   /// assest/images/banana.svg
   static const String imagesBanana = "assest/images/banana.svg";
@@ -34,19 +34,20 @@ class Assets {
   /// assest/images/pepper.svg
   static const String imagesPepper = "assest/images/pepper.svg";
 
-  /// Assets for imagesSlider 1
-  /// assest/images/Slider 1.svg
-  static const String imagesSlider1 = "assest/images/Slider 1.svg";
+  /// Assets for imagesSliderOne
+  /// assest/images/SliderOne.png
+  static const String imagesSliderOne = "assest/images/SliderOne.png";
 
-  /// Assets for imagesSlider 2
-  /// assest/images/Slider 2.svg
-  static const String imagesSlider2 = "assest/images/Slider 2.svg";
+  /// Assets for imagesSliderThree
+  /// assest/images/SliderThree.png
+  static const String imagesSliderThree = "assest/images/SliderThree.png";
 
-  /// Assets for imagesSlider 3
-  /// assest/images/Slider 3.svg
-  static const String imagesSlider3 = "assest/images/Slider 3.svg";
+  /// Assets for imagesSliderTwo
+  /// assest/images/SliderTwo.png
+  static const String imagesSliderTwo = "assest/images/SliderTwo.png";
 
   /// Assets for imagesVegetables
   /// assest/images/vegetables.svg
   static const String imagesVegetables = "assest/images/vegetables.svg";
 }
+

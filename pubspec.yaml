@@ -62,6 +62,7 @@ flutter:
     - assest/images/
 
 
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
@@ -87,3 +88,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_assets:
+  assets_path: assest/images/
+  output_path: lib/Core/utils/
+  filename: assets.dart
+  field_prefix:
+

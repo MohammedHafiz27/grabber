@@ -3,36 +3,36 @@ class Assets {
   Assets._();
   
   /// Assets for imagesBanana
-  /// assest/images/banana.svg
-  static const String imagesBanana = "assest/images/banana.svg";
+  /// assest/images/banana.png
+  static const String imagesBanana = "assest/images/banana.png";
 
-  /// Assets for imagesBasket
-  /// assest/images/basket.svg
-  static const String imagesBasket = "assest/images/basket.svg";
+  /// Assets for imagesBeverages
+  /// assest/images/beverages.png
+  static const String imagesBeverages = "assest/images/beverages.png";
+
+  /// Assets for imagesEggMilk
+  /// assest/images/egg_milk.png
+  static const String imagesEggMilk = "assest/images/egg_milk.png";
+
+  /// Assets for imagesFruits
+  /// assest/images/fruits.png
+  static const String imagesFruits = "assest/images/fruits.png";
 
   /// Assets for imagesGrabber
   /// assest/images/Grabber.svg
   static const String imagesGrabber = "assest/images/Grabber.svg";
 
-  /// Assets for imagesImageFruits
-  /// assest/images/image_fruits.svg
-  static const String imagesImageFruits = "assest/images/image_fruits.svg";
-
   /// Assets for imagesLaundry
-  /// assest/images/laundry.svg
-  static const String imagesLaundry = "assest/images/laundry.svg";
-
-  /// Assets for imagesMilkEgg
-  /// assest/images/milk_egg.svg
-  static const String imagesMilkEgg = "assest/images/milk_egg.svg";
+  /// assest/images/laundry.png
+  static const String imagesLaundry = "assest/images/laundry.png";
 
   /// Assets for imagesOrange
-  /// assest/images/orange.svg
-  static const String imagesOrange = "assest/images/orange.svg";
+  /// assest/images/orange.png
+  static const String imagesOrange = "assest/images/orange.png";
 
-  /// Assets for imagesPepper
-  /// assest/images/pepper.svg
-  static const String imagesPepper = "assest/images/pepper.svg";
+  /// Assets for imagesPapper
+  /// assest/images/papper.png
+  static const String imagesPapper = "assest/images/papper.png";
 
   /// Assets for imagesSliderOne
   /// assest/images/SliderOne.png
@@ -47,7 +47,7 @@ class Assets {
   static const String imagesSliderTwo = "assest/images/SliderTwo.png";
 
   /// Assets for imagesVegetables
-  /// assest/images/vegetables.svg
-  static const String imagesVegetables = "assest/images/vegetables.svg";
+  /// assest/images/vegetables.png
+  static const String imagesVegetables = "assest/images/vegetables.png";
 }
 

@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grabber/Core/banners_list.dart';
@@ -14,16 +13,13 @@ class MyCarouselSlider extends StatelessWidget {
         return Image.asset(BannersList.banners[index]);
       },
       options: CarouselOptions(
-        aspectRatio: 16 / 9,
-        viewportFraction: 0.8,
+        viewportFraction: 0.84,
+        aspectRatio: 383 / 222,
         initialPage: 0,
-        enableInfiniteScroll: true,
         autoPlay: true,
-        autoPlayInterval: Duration(seconds: 2),
-        autoPlayAnimationDuration: Duration(milliseconds: 800),
-        autoPlayCurve: Curves.easeInOut,
+        enlargeStrategy: CenterPageEnlargeStrategy.scale,
+        autoPlayAnimationDuration: Duration(milliseconds: 2500),
         enlargeCenterPage: true,
-        enlargeFactor: 0.3,
         scrollDirection: Axis.horizontal,
       ),
     );

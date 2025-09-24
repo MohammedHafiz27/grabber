@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grabber/Core/utils/app_styles.dart';
@@ -9,6 +8,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      scrolledUnderElevation: 0,
+      surfaceTintColor: Colors.transparent,
+      elevation: 0,
       leading: SizedBox.shrink(),
       leadingWidth: 0,
       title: Row(

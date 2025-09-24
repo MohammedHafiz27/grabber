@@ -4,6 +4,7 @@ import 'package:grabber/Features/home_page/presentation/views/widgets/custom_app
 import 'package:grabber/Features/home_page/presentation/views/widgets/fruits_header.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/fruits_item_list_builder.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/my_carouse_slider.dart';
+import 'package:grabber/Features/home_page/presentation/views/widgets/pop_up_cart.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,12 +15,17 @@ class HomePage extends StatelessWidget {
       appBar: CustomAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: MyCarouselSlider()),
-            SliverToBoxAdapter(child: CategoryItemListBuilder()),
-            SliverToBoxAdapter(child: FruitsHeader()),
-            SliverToBoxAdapter(child: FruitsItemListBuilder()),
+        child: Stack(
+          children: [
+            CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(child: MyCarouselSlider()),
+                SliverToBoxAdapter(child: CategoryItemListBuilder()),
+                SliverToBoxAdapter(child: FruitsHeader()),
+                SliverToBoxAdapter(child: FruitsItemListBuilder()),
+              ],
+            ),
+            Positioned(bottom: 100, child: PopUpCart()),
           ],
         ),
       ),

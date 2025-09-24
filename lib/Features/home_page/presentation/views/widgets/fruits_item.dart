@@ -29,12 +29,15 @@ class FruitsItem extends StatelessWidget {
                     child: Image.asset(fruitsModel.image, height: 120),
                   ),
                   Positioned(
-                    right: 1,
-                    bottom: 1,
+                    right: 0,
+                    bottom: 0,
                     child: IconButton(
                       padding: EdgeInsets.zero,
                       onPressed: () {},
-                      icon: Icon(Icons.add_circle_outline_outlined, color: Colors.white, size: 38),
+                      icon: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        child: Icon(Icons.add, color: Colors.black, size: 32),
+                      ),
                     ),
                   ),
                 ],

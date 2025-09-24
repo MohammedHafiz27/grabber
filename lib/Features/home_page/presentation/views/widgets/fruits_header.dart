@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:grabber/Core/utils/app_styles.dart';
+import 'package:grabber/Core/utils/colors.dart';
 
 class FruitsHeader extends StatelessWidget {
   const FruitsHeader({super.key});
@@ -12,7 +13,7 @@ class FruitsHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text("Fruits", style: AppStyles.styleBold16(context)),
-          Text("See all", style: AppStyles.styleSemiBold14(context).copyWith(color: Color(0xff0CA201))),
+          Text("See all", style: AppStyles.styleSemiBold14(context).copyWith(color: ColorsClass.primaryColor)),
         ],
       ),
     );

@@ -16,6 +16,7 @@ class MyCarouselSlider extends StatelessWidget {
         viewportFraction: 0.84,
         aspectRatio: 383 / 222,
         initialPage: 0,
+        clipBehavior: Clip.none,
         autoPlay: true,
         enlargeStrategy: CenterPageEnlargeStrategy.scale,
         autoPlayAnimationDuration: Duration(milliseconds: 2500),

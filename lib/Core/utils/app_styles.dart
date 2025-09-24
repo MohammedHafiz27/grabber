@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grabber/Core/utils/size_config.dart';
 
 abstract class AppStyles {
@@ -6,7 +7,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Inter',
+      fontFamily: GoogleFonts.inter().fontFamily,
       fontWeight: FontWeight.w600,
     );
   }
@@ -15,7 +16,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 14),
-      fontFamily: 'Inter',
+      fontFamily: GoogleFonts.inter().fontFamily,
       fontWeight: FontWeight.w500,
       height: 1.43,
     );
@@ -25,7 +26,7 @@ abstract class AppStyles {
     return TextStyle(
       color: const Color(0xFF5A5555),
       fontSize: getResponsiveFontSize(context, fontSize: 12),
-      fontFamily: 'Inter',
+      fontFamily: GoogleFonts.inter().fontFamily,
       fontWeight: FontWeight.w600,
     );
   }
@@ -34,7 +35,7 @@ abstract class AppStyles {
     return TextStyle(
       color: Theme.of(context).textTheme.bodyLarge?.color,
       fontSize: getResponsiveFontSize(context, fontSize: 10),
-      fontFamily: 'Inter',
+      fontFamily: GoogleFonts.inter().fontFamily,
       fontWeight: FontWeight.w500,
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grabber/Core/utils/app_styles.dart';
 import 'package:grabber/Features/home_page/data/models/fruits_model.dart';
+import 'package:grabber/Features/home_page/presentation/views/widgets/custom_product_buttom.dart';
 
 class FruitsItem extends StatelessWidget {
   const FruitsItem({super.key, required this.fruitsModel});
@@ -28,18 +29,7 @@ class FruitsItem extends StatelessWidget {
                     ),
                     child: Image.asset(fruitsModel.image, height: 120),
                   ),
-                  Positioned(
-                    right: 0,
-                    bottom: 0,
-                    child: IconButton(
-                      padding: EdgeInsets.zero,
-                      onPressed: () {},
-                      icon: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        child: Icon(Icons.add, color: Colors.black, size: 32),
-                      ),
-                    ),
-                  ),
+                  Positioned(right: 5, bottom: 5, child: CustomProductButton(fruitsModel: fruitsModel)),
                 ],
               ),
               Text(fruitsModel.name, style: AppStyles.styleBold16(context)),

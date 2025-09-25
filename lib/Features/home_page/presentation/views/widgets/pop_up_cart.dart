@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grabber/Core/utils/app_styles.dart';
 import 'package:grabber/Core/utils/assets.dart';
 import 'package:grabber/Core/utils/colors.dart';
+import 'package:grabber/Features/home_page/presentation/view%20models/cart_cubit/cart_cubit.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/cart_item_builder.dart';
 
 class PopUpCart extends StatelessWidget {
@@ -22,11 +24,18 @@ class PopUpCart extends StatelessWidget {
           VerticalDivider(indent: 12, endIndent: 12),
 
           Text("View Basket", style: AppStyles.styleBold16(context).copyWith(color: Colors.white)),
-          SvgPicture.asset(
-            Assets.imagesBasket,
-            height: 24,
-            colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+          Badge(
+            label: Text(
+              context.read<CartCubit>().state.length.toString(),
+              style: AppStyles.styleBold12(context).copyWith(color: Colors.white),
+            ),
+            child: SvgPicture.asset(
+              Assets.imagesBasket,
+              height: 32,
+              colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+            ),
           ),
+
           SizedBox(width: 16),
         ],
       ),

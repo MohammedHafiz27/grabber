@@ -13,12 +13,15 @@ class FruitsItemListBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 170 / 115,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: fruits.length,
-        itemBuilder: (context, index) => FruitsItem(fruitsModel: fruits[index]),
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: 300),
+      child: AspectRatio(
+        aspectRatio: 170 / 140,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: fruits.length,
+          itemBuilder: (context, index) => FruitsItem(fruitsModel: fruits[index]),
+        ),
       ),
     );
   }

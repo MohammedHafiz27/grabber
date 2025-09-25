@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grabber/Core/banners_list.dart';
+import 'package:grabber/Core/utils/size_config.dart';
 
 class MyCarouselSlider extends StatelessWidget {
   const MyCarouselSlider({super.key});
@@ -13,8 +14,8 @@ class MyCarouselSlider extends StatelessWidget {
         return Image.asset(BannersList.banners[index]);
       },
       options: CarouselOptions(
-        viewportFraction: 0.84,
-        aspectRatio: 383 / 222,
+        viewportFraction: MediaQuery.sizeOf(context).width > SizeConfig.tabletBreakPoint ? 0.5 : 0.84,
+        aspectRatio: MediaQuery.sizeOf(context).width > SizeConfig.tabletBreakPoint ? 160 / 60 : 383 / 222,
         initialPage: 0,
         clipBehavior: Clip.none,
         autoPlay: true,

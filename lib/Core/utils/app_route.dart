@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:grabber/Features/home_page/presentation/view%20models/cart_cubit/cart_cubit.dart';
 import 'package:grabber/Features/home_page/presentation/views/home_page.dart';
 import 'package:grabber/Features/splash_screen/presentation/views/splash_screen.dart';
 
@@ -17,7 +19,7 @@ abstract class AppRoute {
           GoRoute(
             path: homeScreen,
             builder: (context, state) {
-              return HomePage();
+              return BlocProvider(create: (context) => CartCubit(), child: HomePage());
             },
           ),
         ],

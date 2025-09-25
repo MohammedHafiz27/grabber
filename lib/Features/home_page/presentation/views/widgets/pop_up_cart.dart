@@ -25,6 +25,7 @@ class PopUpCart extends StatelessWidget {
 
           Text("View Basket", style: AppStyles.styleBold16(context).copyWith(color: Colors.white)),
           Badge(
+            backgroundColor: Colors.red,
             label: Text(
               context.read<CartCubit>().state.length.toString(),
               style: AppStyles.styleBold12(context).copyWith(color: Colors.white),

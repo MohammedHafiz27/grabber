@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grabber/Features/home_page/data/models/fruits_model.dart';
 import 'package:grabber/Features/home_page/presentation/view%20models/cart_cubit/cart_cubit.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/category_item_list_builder.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/custom_app_bar.dart';
@@ -15,23 +16,39 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: BlocProvider(
-        create: (context) => CartCubit(),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: Stack(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CustomScrollView(
-                slivers: [
-                  SliverToBoxAdapter(child: MyCarouselSlider()),
-                  SliverToBoxAdapter(child: CategoryItemListBuilder()),
-                  SliverToBoxAdapter(child: FruitsHeader()),
-                  SliverToBoxAdapter(child: FruitsItemListBuilder()),
-                ],
-              ),
-              Positioned(bottom: 100, child: PopUpCart()),
+              Icon(Icons.home, color: Colors.green, size: 30),
+              Icon(Icons.favorite_border, color: Colors.grey, size: 30),
+              Icon(Icons.notifications_none, color: Colors.grey, size: 30),
+              Icon(Icons.person_outline, color: Colors.grey, size: 30),
             ],
           ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+        child: Stack(
+          children: [
+            CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(child: MyCarouselSlider()),
+                SliverToBoxAdapter(child: CategoryItemListBuilder()),
+                SliverToBoxAdapter(child: FruitsHeader()),
+                SliverToBoxAdapter(child: FruitsItemListBuilder()),
+              ],
+            ),
+            BlocBuilder<CartCubit, List<FruitsModel>>(
+              builder: (context, state) {
+                return state.isNotEmpty ? Positioned(bottom: 20, child: PopUpCart()) : SizedBox.shrink();
+              },
+            ),
+          ],
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grabber/Core/utils/colors.dart';
 import 'package:grabber/Features/home_page/data/models/fruits_model.dart';
 import 'package:grabber/Features/home_page/presentation/view%20models/cart_cubit/cart_cubit.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/category_item_list_builder.dart';
@@ -17,16 +18,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(Icons.home, color: Colors.green, size: 30),
-              Icon(Icons.favorite_border, color: Colors.grey, size: 30),
-              Icon(Icons.notifications_none, color: Colors.grey, size: 30),
-              Icon(Icons.person_outline, color: Colors.grey, size: 30),
+              Icon(Icons.home, color: AppColors.primaryColor, size: 30),
+              Icon(Icons.favorite_border, color: AppColors.greyColor, size: 30),
+              Icon(Icons.notifications_none, color: AppColors.greyColor, size: 30),
+              Icon(Icons.person_outline, color: AppColors.greyColor, size: 30),
             ],
           ),
         ),

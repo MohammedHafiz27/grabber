@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grabber/Core/utils/app_styles.dart';
+import 'package:grabber/Core/utils/colors.dart';
 import 'package:grabber/Features/home_page/data/models/fruits_model.dart';
 import 'package:grabber/Features/home_page/presentation/views/widgets/custom_product_buttom.dart';
 
@@ -25,7 +26,9 @@ class FruitsItem extends StatelessWidget {
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color.fromARGB(140, 224, 223, 223),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? AppColors.secondryColorDark
+                          : AppColors.secondryColor,
                     ),
                     child: Image.asset(fruitsModel.image, height: 120),
                   ),

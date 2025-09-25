@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:grabber/Core/utils/app_styles.dart';
 import 'package:grabber/Features/home_page/data/models/fruits_model.dart';
 import 'package:grabber/Features/home_page/presentation/view%20models/cart_cubit/cart_cubit.dart';
 
@@ -25,7 +26,10 @@ class CustomProductButton extends StatelessWidget {
                         },
                         icon: Icon(Icons.delete_forever_rounded),
                       ),
-                      Text(context.read<CartCubit>().getItemCount(fruitsModel).toString()),
+                      Text(
+                        context.read<CartCubit>().getItemCount(fruitsModel).toString(),
+                        style: AppStyles.styleBold16(context),
+                      ),
                       IconButton(
                         onPressed: () {
                           context.read<CartCubit>().addToCart(fruitsModel);

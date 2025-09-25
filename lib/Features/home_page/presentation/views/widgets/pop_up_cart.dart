@@ -15,7 +15,7 @@ class PopUpCart extends StatelessWidget {
     return Container(
       height: 70,
       width: MediaQuery.sizeOf(context).width - 30,
-      decoration: BoxDecoration(color: ColorsClass.primaryColor, borderRadius: BorderRadius.circular(12)),
+      decoration: BoxDecoration(color: AppColors.primaryColor, borderRadius: BorderRadius.circular(12)),
       child: Row(
         spacing: 8,
         mainAxisAlignment: MainAxisAlignment.end,

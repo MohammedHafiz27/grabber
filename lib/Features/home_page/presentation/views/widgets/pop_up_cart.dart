@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:grabber/Core/utils/app_styles.dart';
 import 'package:grabber/Core/utils/assets.dart';
 import 'package:grabber/Core/utils/colors.dart';
+import 'package:grabber/Features/home_page/presentation/views/widgets/cart_item_builder.dart';
 
 class PopUpCart extends StatelessWidget {
   const PopUpCart({super.key});
@@ -17,11 +18,7 @@ class PopUpCart extends StatelessWidget {
         spacing: 8,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Container(
-            padding: const EdgeInsets.all(14),
-            decoration: BoxDecoration(shape: BoxShape.circle, color: Color.fromARGB(255, 255, 255, 255)),
-            child: Image.asset(Assets.imagesBanana, height: 24),
-          ),
+          Expanded(child: CartItemBuilder()),
           VerticalDivider(indent: 12, endIndent: 12),
 
           Text("View Basket", style: AppStyles.styleBold16(context).copyWith(color: Colors.white)),
